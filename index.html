@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+            <title></title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <style>
+
+            /* volume / mute */
+
+            .video-control-mute.muted i.video-unmuted{
+                display:none;
+            }
+            .video-control-mute.unmuted i.video-muted{
+                display:none;
+            }
+
+            .video-control-play-pause.pause i.video-play{
+                display:none;
+            }
+            .video-control-play-pause.play i.video-pause{
+                display:none;
+            }
+
+
+            .timerText {
+                font-size: 18px;
+            }
+            @media (max-width: 450px) {
+                .btn {
+                    font-size:11px;
+                    padding:4px 6px;
+                }
+            }
+            input[type='range'] {
+                background:white;
+                padding:0.5em;
+                color:white;
+            }
+        </style>
+
+    </head>
+    <body>
+
+    <div class="w-100 p-10 justify-content-center p-3">
+  
+
+        <div class="video-container container-fluid m-0 p-0 border m-auto col-sm-12 col-md-12 col-lg-10 col-xl-7">
+            
+            <div class="row-fluid bg-primary text-white text-justify text-center p-2 text-uppercase">
+                <strong>
+                    <h3>
+                        This is the video title
+                    </h3>
+                </strong>
+            </div>
+            <div class="row-fluid">
+                <div class="span">
+                    <video loop muted playsinline id="videoplayer" class="w-100">
+                        <source src="upcycle.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-seekbar row-fluid bg-dark w-100 position-relative c-pointer mb-1" style="height:10px;">
+                <span class="progress bg-danger h-5 w-0 position-absolute" style="z-index:2;top:0;bottom:0;left:0;height:10px;"> </span>
+            </div>
+
+            <div class="video-controls align-baseline row-fluid d-flex justify-content-between bg-primary text-white p-2">
+                
+                <button class="video-control-play-pause control-btn play btn btn-primary" id="start">
+                    <i class="fas video-play fa-play"></i>
+                    <i class="fas video-pause fa-pause"></i>
+                </button>
+
+                <button class="video-control-mute control-btn muted btn btn-primary">
+                    <i class="fas video-muted fa-volume-mute"></i>
+                    <i class="fas video-unmuted fa-volume-up"></i>
+                </button>
+
+                <div class="span">
+                    <input type="range"  class="video-volume-slider custom-range w-100 h-100" value="100">
+                </div>
+
+                <div class="timer d-none d-sm-block span align-baseline">
+                    <span class="timerText startTime">00:00:00</span> / 
+                    <span class="timerText endTime">00:00:00</span>
+                </div>
+
+                <div class="fullscreen">
+                    <i class="far fa-square"></i>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+        <script src="script.js"></script>
+
+        <script type="text/javascript">
+            /*$(function() {
+                var player = new tv.freewheel.DemoPlayer();
+                player.requestAds();
+                $('#start').bind('click', function(evt){
+                    player.play();
+                });
+            });*/
+            </script>
+    </body>
+</html> 
