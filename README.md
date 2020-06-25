@@ -1,8 +1,8 @@
 # html5 video player
 
-This player aims to implement a few video ad SKDs as well to support VAST, VPAID and VMAP. 
+This player aims to implement a few video ad SKDs `and native support for VAST, VPAID and VMAP. 
 
-Ecventually implementing HLS and other streaming formats. 
+Eventually implementing HLS and other streaming formats. 
 
 # This is a work in progress
 
